@@ -28,6 +28,7 @@
       <button type="button" ng-click="add()">Add</button>
     </form>
     <br>
+          {{swoleCtrl.details}}
     <table class="table table-condensed">
       <thead>
           <td>Date</td>
@@ -36,7 +37,8 @@
           <td>Weight</td>
           <td>Reps</td>
       </thead>
-      <tr ng-repeat="x in swoleCtrl.details">
+
+      <tr ng-repeat="x in details">
         <td>{{ x.date  }}</td>
         <td>{{ x.muscleGroup }}</td>
         <td>{{ x.exerciseName }}</td>
