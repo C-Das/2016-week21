@@ -1,0 +1,16 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+  table-layout: inherit;
+}
+h1 {
+  padding-top: 20px;
+}
+table {
+  text-align: center;
+}
+thead {
+  text-align: center;
+  font-size: 1.5em;
+}
+
