@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="gitRepo">
+<head>
+  <title>Git repo App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script type="text/javascript" src="gitRepoDetails.js"></script>
+</head>
+<body ng-controller="gitRepoController">
+  <h1>{{ title }}</h1>
+  <div class="medium-6 columns">
+      <input type="text" ng-model="username" placeholder="Type your GIT user name" ng-model-options="{debounce:500}">
+      <br>
+      <select ng-model="repoList"  Placeholder="List of Repos" ng-change="getCommits()">
+        <option value="{{ repo.full_name }}" ng-repeat="repo in repos"> {{repo.full_name}}</option>
+      </select>
+  </div>
+</body>
+</html>
